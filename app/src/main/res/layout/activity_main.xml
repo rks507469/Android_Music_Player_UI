@@ -9,4 +9,12 @@
     <!--We will make this application in the Dark Mode
         Background Color -> #1C1C1E
     -->
+    <!--This is the App Bar. Google it you will find more reference on the android docs-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/customToolbar"
+        android:background="@color/background"
+        android:elevation="4dp"
+        android:theme="@style/CustomToolbarTheme" />
 </LinearLayout>
