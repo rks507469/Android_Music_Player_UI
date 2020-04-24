@@ -10,6 +10,7 @@
         Background Color -> #1C1C1E
     -->
     <!--This is the App Bar. Google it you will find more reference on the android docs-->
+    <!--Elevation will not cause any error as such-->
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
