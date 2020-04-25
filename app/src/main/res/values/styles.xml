@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
@@ -6,7 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/bottomBackground</item>
     </style>
+
+    <!--Custom menu theme-->
     <style name="CustomToolbarTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -14,6 +17,8 @@
         <!--This line changes the color of the three dots present in the menu-->
         <item name="android:textColorSecondary">@color/colorAccent</item>
     </style>
+
+    <!--Custom Bottom navigation menu-->
 
 
 </resources>

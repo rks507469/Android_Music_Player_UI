@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
     <!--We will make this application in the Dark Mode
         Background Color -> #1C1C1E
     -->
@@ -17,5 +18,26 @@
         android:id="@+id/customToolbar"
         android:background="@color/background"
         android:elevation="4dp"
-        android:theme="@style/CustomToolbarTheme" />
+        android:theme="@style/CustomToolbarTheme"
+        tools:targetApi="21" />
+
+    <!--Frame Layout for using the fragments in the application-->
+    <!--We have this information from the android hive - Bottom Navigation-->
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--I am using the icon_color layout file for selecting the color of active icon-->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/bottomBackground"
+            app:itemBackground="@android:color/transparent"
+            app:itemTextColor="@drawable/icon_color"
+            app:itemIconTint="@drawable/icon_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_menu"/>
+    </FrameLayout>
+
 </LinearLayout>

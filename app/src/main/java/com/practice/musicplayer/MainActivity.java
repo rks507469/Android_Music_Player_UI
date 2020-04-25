@@ -1,13 +1,20 @@
 package com.practice.musicplayer;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //actions when the items on the menu are clicked
+    //it is incomplete because we have'nt created any activities yet
     @Override
     public boolean onOptionsItemSelected (MenuItem item) {
         switch (item.getItemId()) {
@@ -47,4 +55,23 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment fragment;
+            switch (menuItem.getItemId()) {
+                case R.id.navigation_library:
+                    return true;
+                case R.id.navigation_for_you:
+                    return true;
+                case R.id.navigation_browse:
+                    return  true;
+                case R.id.navigation_radio:
+                    return  true;
+                default:
+                    return false;
+            }
+        }
+    };
 }
