@@ -5,5 +5,6 @@ Using the apple desing guidelines to build a Music player UI. I will be building
   <ol type="I">
     <li>Added Menu</li>
     <li>Added Bottom Navigation</li>
+    <li>Added Fragments</li>
   </ol>
 </p>
