@@ -34,18 +34,26 @@ public class MainActivity extends AppCompatActivity {
         //Bottom navigation menu actions on the selection of the items
         //it will be used to trigger the functions to call the fragments
         //to load the fragments in the activity
-        final BottomNavigationView navigation = findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                int id = menuItem.getItemId();
-                if(id == R.id.navigation_library) {
-                    loadFragment(new LibraryFragment());
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_library:
+                        loadFragment(new LibraryFragment());
+                        return true;
+                    case R.id.navigation_for_you:
+                        loadFragment(new ForYouFragment());
+                        return true;
+                    case R.id.navigation_browse:
+                        loadFragment(new BrowseFragment());
+                        return true;
+                    case R.id.navigation_radio:
+                        loadFragment(new RadioFragment());
+                        return true;
+                    default:
+                        return false;
                 }
-                else if (id == R.id.navigation_for_you) {
-                    loadFragment(new ForYouFragment());
-                }
-                return false;
             }
         });
 
