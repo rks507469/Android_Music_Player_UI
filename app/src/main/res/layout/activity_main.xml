@@ -11,7 +11,7 @@
         Background Color -> #1C1C1E
     -->
     <!--This is the App Bar. Google it you will find more reference on the android docs-->
-    <!--Elevation will not cause any error as such-->
+    <!--Elevation will not cause any error as such it will be targeted only when API 21 or higher is detected-->
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -22,12 +22,16 @@
         tools:targetApi="21" />
 
     <!--Frame Layout for using the fragments in the application-->
+    <!--It will act as the frame for the fragments to be loaded-->
+    <!--We want to change the fragments during the runtime that's why i am using the frame layout-->
+    <!--If we don't want to change the fragments during the runtime then we can simply add them to the XML file-->
     <!--We have this information from the android hive - Bottom Navigation-->
     <FrameLayout
-        android:id="@+id/frame_container"
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <!--I am using the icon_color layout file for selecting the color of active icon-->
+        <!--I am using the icon_color layout file (drawable folder) for selecting the color of active icon-->
+        <!--This is the bottom navigation bar with the menu resource-->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

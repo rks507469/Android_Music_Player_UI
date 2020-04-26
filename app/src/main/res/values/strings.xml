@@ -7,4 +7,9 @@
     <string name="title_for_you">For You</string>
     <string name="title_browse">Browse</string>
     <string name="title_radio">Radio</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="this_the_library_fragment">This the Library Fragment</string>
+    <string name="this_is_for_you_fragment">This is for you fragment</string>
 </resources>

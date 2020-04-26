@@ -6,19 +6,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--This is used to change the background color of the navigation button on the phone-->
         <item name="android:navigationBarColor" tools:targetApi="21">@color/bottomBackground</item>
     </style>
 
-    <!--Custom menu theme-->
+    <!--Custom App Bar theme-->
     <style name="CustomToolbarTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <!--This line changes the color of the three dots present in the menu-->
+        <!--i don't want to change the whole secondary colors of the application so i declared the different theme for the App Bar-->
         <item name="android:textColorSecondary">@color/colorAccent</item>
     </style>
-
-    <!--Custom Bottom navigation menu-->
-
-
 </resources>
