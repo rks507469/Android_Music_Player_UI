@@ -28,21 +28,27 @@ public class MainActivity extends AppCompatActivity {
         //creating the fragments view
         //checking for the fragment container
         if(findViewById(R.id.fragment_container) != null) {
-            // However, if we're being restored from a previous state,
-            // then we don't need to do anything and should return or else
-            // we could end up with overlapping fragments.
-            if (savedInstanceState != null) {
-                return;
-            }
-            //creating the fragment
-            LibraryFragment libraryFragment = new LibraryFragment();
-            // In case this activity was started with special instructions from an
-            // Intent, pass the Intent's extras to the fragment as arguments
-            libraryFragment.setArguments(getIntent().getExtras());
-
-            // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, libraryFragment).commit();
+            loadFragment(new LibraryFragment());
         }
+
+        //Bottom navigation menu actions on the selection of the items
+        //it will be used to trigger the functions to call the fragments
+        //to load the fragments in the activity
+        final BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                if(id == R.id.navigation_library) {
+                    loadFragment(new LibraryFragment());
+                }
+                else if (id == R.id.navigation_for_you) {
+                    loadFragment(new ForYouFragment());
+                }
+                return false;
+            }
+        });
+
     }
 
     //to add menu to the app bar we need to inflate the menu first
@@ -75,40 +81,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //Bottom navigation menu actions on the selection of the items
-    //it will be used to trigger the functions to call the fragments
-    //to load the fragments in the activity
-    private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment fragment;
-            switch (menuItem.getItemId()) {
-                case R.id.navigation_library:
-                    //Library fragment
-                    LibraryFragment libraryFragment = new LibraryFragment();
-                    FragmentTransaction libraryFragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    libraryFragmentTransaction.replace(R.id.fragment_container, libraryFragment);
-                    libraryFragmentTransaction.addToBackStack(null);
-                    libraryFragmentTransaction.commit();
-                    return true;
-                case R.id.navigation_for_you:
-                    //ForYou fragment
-                    ForYouFragment forYouFragment = new ForYouFragment();
-                    FragmentTransaction forYouFragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    forYouFragmentTransaction.replace(R.id.fragment_container, forYouFragment);
-                    forYouFragmentTransaction.addToBackStack(null);
-                    forYouFragmentTransaction.commit();
-                    return true;
-                case R.id.navigation_browse:
-                    //ignore this for the moment
-                    return  true;
-                case R.id.navigation_radio:
-                    //ignore this for the moment
-                    return  true;
-                default:
-                    //ignore this for the moment
-                    return false;
-            }
-        }
-    };
+    //function to load the fragment into the fragment container
+    public void loadFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
+    }
 }

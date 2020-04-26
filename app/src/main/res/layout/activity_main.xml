@@ -33,11 +33,13 @@
         <!--I am using the icon_color layout file (drawable folder) for selecting the color of active icon-->
         <!--This is the bottom navigation bar with the menu resource-->
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
             android:background="@color/bottomBackground"
-            app:itemBackground="@android:color/transparent"
             app:itemTextColor="@drawable/icon_color"
             app:itemIconTint="@drawable/icon_color"
             app:labelVisibilityMode="labeled"
