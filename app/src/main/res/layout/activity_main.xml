@@ -8,7 +8,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
     <!--We will make this application in the Dark Mode
-        Background Color -> #1C1C1E
+        Background Color -> #000000
     -->
     <!--This is the App Bar. Google it you will find more reference on the android docs-->
     <!--Elevation will not cause any error as such it will be targeted only when API 21 or higher is detected-->
