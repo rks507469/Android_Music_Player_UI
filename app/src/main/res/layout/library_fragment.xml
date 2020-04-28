@@ -42,6 +42,7 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="18sp"
                 android:layout_weight="2"
+                android:textStyle="normal"
                 android:gravity="end">
             </TextView>
         </LinearLayout>
@@ -54,10 +55,111 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="?android:attr/dividerHorizontal"/>
+            android:background="@color/horizontalLine"/>
 
         <!--Here is the View List-->
         <!--For now I will only make the static list-->
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <TextView
+            android:id="@+id/library_list_item_playlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/playlists"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="normal">
+        </TextView>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/horizontalLine"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <TextView
+            android:id="@+id/library_list_item_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/artists"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="normal">
+        </TextView>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/horizontalLine"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <TextView
+            android:id="@+id/library_list_item_albums"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/albums"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="normal">
+        </TextView>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/horizontalLine"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <TextView
+            android:id="@+id/library_list_item_songs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/songs"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="normal">
+        </TextView>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/horizontalLine"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <TextView
+            android:id="@+id/library_list_item_downloaded_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/downloaded_music"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="normal">
+        </TextView>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/horizontalLine"/>
+        <!--List Ends-->
 
 
     </LinearLayout>
