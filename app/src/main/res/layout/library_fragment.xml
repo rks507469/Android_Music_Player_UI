@@ -4,10 +4,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LibraryFragment">
-    <TextView
+    <LinearLayout
+        android:id="@+id/library_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/this_the_library_fragment"
-        android:textSize="30sp"/>
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        tools:ignore="UselessParent">
 
+        <!--I Will be making the library Page here-->
+        <LinearLayout
+            android:id="@+id/library_tittle_text_with_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp">
+            <!--Title Text-->
+            <TextView
+                android:id="@+id/library_tittle_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/library"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_weight="2">
+            </TextView>
+            <!--List edit option-->
+            <!--Setting the gravity to the end to make text align to right-->
+            <TextView
+                android:id="@+id/library_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:layout_weight="2"
+                android:gravity="end">
+            </TextView>
+        </LinearLayout>
+
+        <!--Space draws the blank space and it ignores the drawing attributes-->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+        <!--Using view  i can draw the horizontal line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/dividerHorizontal"/>
+
+        <!--Here is the View List-->
+        <!--For now I will only make the static list-->
+
+
+    </LinearLayout>
 </FrameLayout>

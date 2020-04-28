@@ -21,9 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //creating teh tool bar
+        //creating the tool bar
         Toolbar customToolbar = findViewById(R.id.customToolbar);
         setSupportActionBar(customToolbar);
+        //this is how to remove the title of the appbar
+        getSupportActionBar().setTitle(null);
 
         //creating the fragments view
         //checking for the fragment container
