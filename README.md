@@ -1,5 +1,5 @@
 # Music Player
-An Awesome UI for the music playing application on the Android. Mostly Inspired by the **Apple Music** Android Application. Or you can say it is a clone.
+An Awesome UI for the music playing application on the Android. Mostly Inspired by the **Apple Music** Android Application.
 
 **NOTE** : It is completely educational project.
 
@@ -16,3 +16,4 @@ ___
 
 
 ### screenshots
+<img src="https://user-images.githubusercontent.com/44531949/81468450-4d6d8d00-91fd-11ea-9c44-91e15c127f31.png" width="30%" /> <img src="https://user-images.githubusercontent.com/44531949/81468513-a76e5280-91fd-11ea-898c-c1769f649492.png" width="30%" />
