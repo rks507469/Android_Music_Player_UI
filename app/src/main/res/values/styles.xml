@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/sf_pro</item>
         <!--This is used to change the background color of the navigation button on the phone-->
         <item name="android:navigationBarColor" tools:targetApi="21">@color/bottomBackground</item>
     </style>

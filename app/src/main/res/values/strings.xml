@@ -22,4 +22,6 @@
     <string name="albums">Albums</string>
     <string name="songs">Songs</string>
     <string name="downloaded_music">Downloaded Music</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="album_art">Album Art</string>
 </resources>
